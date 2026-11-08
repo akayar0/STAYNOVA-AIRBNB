@@ -1,0 +1,14 @@
+{
+  "name": "staynova-airbnb",
+  "version": "1.0.0",
+  "description": "STAYNOVA-AIRBNB — Otel ve Airbnb Rezervasyon Takip Sistemi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
+
