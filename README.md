@@ -9,10 +9,10 @@ Bu çalışma alanı (`STAYNOVA-AIRBNB`), projenin **yalnızca 1. Hafta (Sprint 
 
 | Ekip Üyesi | Jira Görevi | Modül / Katman |
 | :--- | :--- | :--- |
-| **1. Kişi (AA)** | `AIR-44`, `AIR-42` | Veritabanı Şeması & ERD (`backend/db.js`), Scrypt & HS256 JWT Motoru (`backend/auth.js`), RBAC (`authMiddleware.js`) ve Kullanıcı Katmanları (`01-user*`) |
-| **2. Kişi (AU)** | `AIR-45` | İlan CRUD İşlemleri ve Görsel Yükleme Servisi (`02-listingRepository.js`, `02-listingService.js`, `02-listingController.js`, `listingManageRoutes.js`) |
-| **3. Kişi (AK)** | `AIR-43` | Giriş/Kayıt Portalı (Blurlu Seyahat Kolajı & Rol Ayrışımı) ve Bilgisayardan Resim Yüklemeli Kullanıcı Profili (`authAndProfileView.js`) |
-| **4. Kişi (AB)** | `AIR-47` | 5 Adımlı İlan Oluşturma/Düzenleme Sihirbazı, 81 İl/İlçe Seçici, Canlı Önizleme Kartı ve Müsaitlik Takvimi (`hostAndWizardView.js`, `constants.js`) |
+| **1. Kişi — Ahmet Kayra Altıparmak (AA)** | `AIR-44`, `AIR-42` | Veritabanı Şeması & ERD (`backend/db.js`), Scrypt & HS256 JWT Motoru (`backend/auth.js`), RBAC (`authMiddleware.js`) ve Kullanıcı Katmanları (`01-user*`) |
+| **2. Kişi — Ahmet Uysal (AU)** | `AIR-45` | İlan CRUD İşlemleri ve Görsel Yükleme Servisi (`02-listingRepository.js`, `02-listingService.js`, `02-listingController.js`, `listingManageRoutes.js`) |
+| **3. Kişi — Ahmet Kayar (AK)** | `AIR-43` | Giriş/Kayıt Portalı (Blurlu Seyahat Kolajı & Rol Ayrışımı) ve Bilgisayardan Resim Yüklemeli Kullanıcı Profili (`authAndProfileView.js`) |
+| **4. Kişi — Ali Önder Biçer (AB)** | `AIR-47` | 5 Adımlı İlan Oluşturma/Düzenleme Sihirbazı, 81 İl/İlçe Seçici, Canlı Önizleme Kartı ve Müsaitlik Takvimi (`hostAndWizardView.js`, `constants.js`) |
 
 ---
 
