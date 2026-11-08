@@ -1,0 +1,337 @@
+/* public/css/modules/admin-and-modals.css — AIR-43 Giriş/Kayıt Poster Kolajı, Profil &AIR-47 Sihirbaz/Takvim Stilleri */
+
+/* 1. AIR-43: Tam Ekran Blurlu Seyahat Poster Kolajı & Sıfır Scroll Kompakt Giriş/Kayıt Kartı */
+.auth-page-stage {
+  position: relative;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.auth-poster-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 26px;
+}
+
+.auth-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 170px;
+  gap: 10px;
+  width: 106%;
+  height: 106%;
+  margin: -3%;
+  filter: blur(2.6px) saturate(1.1);
+  opacity: 0.76;
+  transform: scale(1.02);
+}
+
+.auth-poster-cell {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.auth-poster-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-poster-veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.32) 0%, rgba(15, 23, 42, 0.72) 100%);
+}
+
+.auth-center-modal-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  padding: 24px 26px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .auth-center-modal-card {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.auth-role-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.06);
+  padding: 5px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+html[data-theme="dark"] .auth-role-tabs {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.auth-role-tab {
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-role-tab.active {
+  background: var(--bg-elevated);
+  color: var(--brand-primary);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.auth-mode-switch {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.auth-mode-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.auth-mode-btn.active {
+  background: rgba(255, 56, 92, 0.1);
+  color: var(--brand-primary);
+  border-color: rgba(255, 56, 92, 0.24);
+}
+
+/* 2. AIR-47: Ev Sahibi 5 Adımlı İlan Sihirbazı, 81 İl/İlçe Popover, Canlı Önizleme ve Müsaitlik Takvimi */
+.wizard-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.wizard-steps-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.wizard-step-pill {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.wizard-step-pill.active {
+  border-color: var(--brand-primary);
+  background: rgba(255, 56, 92, 0.08);
+  color: var(--brand-primary);
+}
+
+.wizard-step-pill.done {
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.wizard-preview-sticky {
+  position: sticky;
+  top: 96px;
+}
+
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 10px;
+}
+
+.amenity-card-item {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  transition: all 0.18s ease;
+}
+
+.amenity-card-item.selected {
+  border-color: var(--brand-primary);
+  background: rgba(255, 56, 92, 0.09);
+  color: var(--brand-primary);
+  font-weight: 500;
+}
+
+.custom-popover-wrapper {
+  position: relative;
+}
+
+.custom-popover-trigger {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-elevated);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.custom-popover-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 290px;
+  overflow-y: auto;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow-hover);
+  padding: 10px;
+  z-index: 900;
+}
+
+.popover-option-item {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popover-option-item:hover,
+.popover-option-item.active {
+  background: rgba(255, 56, 92, 0.1);
+  color: var(--brand-primary);
+}
+
+/* Müsaitlik Takvimi Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.cal-day-header {
+  text-align: center;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+.cal-day {
+  padding: 10px 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--text-main);
+  text-align: center;
+  font-size: 0.82rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.cal-day:hover {
+  border-color: var(--brand-primary);
+}
+
+.cal-day.blocked {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #dc2626;
+  text-decoration: line-through;
+}
+
+html[data-theme="dark"] .cal-day.blocked {
+  color: #f87171;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 980px) {
+  .wizard-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .wizard-steps-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
