@@ -63,3 +63,5 @@ Tarayıcıdan **`http://localhost:3000`** adresine gidebilir veya doğrudan `ind
 * **Misafir Demo Hesabı:** `misafir@staynova.com` / Şifre: `123456`
 * **Ev Sahibi Demo Hesabı:** `evsahibi@staynova.com` / Şifre: `123456`
 
+
+- Ahmet Uysal: Backend Gelistirici
