@@ -1,0 +1,75 @@
+/* GİRİŞ & KAYIT PORTALI BLURLU SEYAHAT KOLAJI */
+.auth-page-stage {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.auth-poster-backdrop {
+  position: absolute;
+  inset: -10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  filter: blur(2.6px);
+  opacity: 0.76;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.auth-poster-tile {
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-center-modal-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.16);
+}
+
+.auth-role-tabs {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.auth-role-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-role-tab.active {
+  background: #ffffff;
+  color: var(--primary-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.auth-toggle-mode {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+

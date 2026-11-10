@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StayNova — Otel & Ev Kiralama Platformu</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Google Fonts: Outfit (300, 400, 500, 600, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Modüler CSS Katmanı -->
+    <link rel="stylesheet" href="css/base/variables-and-reset.css" />
+    <link rel="stylesheet" href="css/layout/header-and-navigation.css" />
+    <link rel="stylesheet" href="css/components/buttons-forms-modals.css" />
+    <link rel="stylesheet" href="css/modules/admin-and-modals.css" />
+</head>
+
+<body>
+    <!-- Üst Gezinme Çubuğu (1. Hafta: 3 Sekmeli Görünüm) -->
+    <div id="headerRoot"></div>
+
+    <!-- Ana İçerik Sahnesi -->
+    <main class="main-container" id="appRoot"></main>
+
+    <!-- Alt Bilgi (Site Footer) -->
+    <footer class="site-footer">
+        <div><strong>✦ StayNova — Otel & Airbnb Rezervasyon Takip Sistemi</strong></div>
+        <div style="margin-top:4px;font-size:0.78rem;">
+            © 2026 StayNova. Tüm telif hakları saklıdır. | Gizlilik Politikası • Kullanım Koşulları • KVKK & Güvenlik
+        </div>
+    </footer>
+
+    <!-- Ön Yüz Katmanları (01-Config, 02-State, 03-API, 04-Controller) -->
+    <script src="js/layers/01-config-layer/constants.js"></script>
+    <script src="js/layers/02-state-layer/stateStore.js"></script>
+    <script src="js/layers/03-api-layer/apiClientService.js"></script>
+    <script src="js/layers/04-controller-layer/routerAndLayoutController.js"></script>
+
+    <!-- 1. HAFTA (SPRINT 1) ÖN YÜZ GÖRÜNÜM MODÜLLERİ -->
+    <!-- AIR-43: Kayıt, Giriş ve Misafir/Kullanıcı Profil Sayfaları (3. Kişi - AK) -->
+    <script src="js/modules/01-kullanici-yonetimi/authAndProfileView.js"></script>
+    <!-- AIR-47: Ev Sahibi İlan Oluşturma/Düzenleme Sihirbazı ve Müsaitlik Takvimi (4. Kişi - AB) -->
+    <script src="js/modules/02-ilan-yonetimi/hostAndWizardView.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+    </script>
+</body>
+
+</html>
